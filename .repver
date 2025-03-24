@@ -1,0 +1,14 @@
+commands:
+ - name: "update"
+   targets:
+   - path: "myversion"
+     pattern: "^Version: (?P<version>.*) # VERSION$"
+   git:
+     create_branch: true
+     branch_name : "update-v{{version}}"
+     commit: true
+     commit_message: "Update version to {{version}}"
+     push: true
+     remote: "origin"
+     return_to_original_branch: true
+     delete_branch: true
