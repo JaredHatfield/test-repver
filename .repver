@@ -10,5 +10,6 @@ commands:
      commit_message: "Update version to {{version}}"
      push: true
      remote: "origin"
+     pull_request: "GITHUB_CLI"
      return_to_original_branch: true
      delete_branch: true
